@@ -1,0 +1,13 @@
+predict_proba(X)
+
+Probability estimates.
+
+The returned estimates for all classes are ordered by the label of classes.
+
+Parameters:	
+X : array-like, shape = [n_samples, n_features]
+
+Returns:	
+T : array-like, shape = [n_samples, n_classes]
+Returns the probability of the sample for each class in the model, where classes are ordered as they are in self.classes_.
+

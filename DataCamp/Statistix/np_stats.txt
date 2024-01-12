@@ -1,0 +1,104 @@
+numpy.random.normal
+numpy.random.normal(loc=0.0, scale=1.0, size=None)
+Draw random samples from a normal (Gaussian) distribution.
+
+The normal distributions occurs often in nature. For example, it describes the commonly occurring distribution of samples influenced by a large number of tiny, random disturbances, each with its own unique distribution, The function has its peak at the mean, and its “spread” increases with the standard deviationnumpy, random.normal is more likely to return samples lying close to the mean, rather than those far away.
+##############################################################################################################################################################################
+numpy.random.poisson
+
+numpy.random.poisson(lam=1.0, size=None)
+Draw samples from a Poisson distribution.
+
+The Poisson distribution is the limit of the binomial distribution for large N.
+##############################################################################################################################################################################
+numpy.random.exponential
+
+numpy.random.exponential(scale=1.0, size=None)
+Draw samples from an exponential distribution.
+
+The exponential distribution is a continuous analogue of the geometric distribution. It describes many common situations, such as the size of raindrops measured over many rainstorms [1], or the time between page requests to Wikipedia [2].
+##############################################################################################################################################################################
+numpy.sum
+
+numpy.sum(a, axis=None, dtype=None, out=None, keepdims=False)[source]
+Sum of array elements over a given axis.
+##############################################################################################################################################################################
+numpy.corrcoef
+
+numpy.corrcoef(x, y=None, rowvar=True, bias=<no value>, ddof=<no value>)[source]
+Return Pearson product-moment correlation coefficients(R).
+The values of R are between -1 and 1, inclusive.
+
+Assume that the observations are in the columns of the observation array m and let f = fweights and a = aweights for brevity. The steps to compute the weighted covariance are as follows:
+
+>>>
+>>> w = f * a
+>>> v1 = np.sum(w)
+>>> v2 = np.sum(w * a)
+>>> m -= np.sum(m * w, axis=1, keepdims=True) / v1
+>>> cov = np.dot(m * w, m.T) * v1 / (v1**2 - ddof * v2)
+Note that when a == 1, the normalization factor v1 / (v1**2 - ddof * v2) goes over to 1 / (np.sum(f) - ddof) as it should.
+##############################################################################################################################################################################
+numpy.var
+
+numpy.var(a, axis=None, dtype=None, out=None, ddof=0, keepdims=<no value>)[source]
+Compute the variance along the specified axis.
+
+Returns the variance of the array elements, a measure of the spread of a distribution. The variance is computed for the flattened array by default, otherwise over the specified axis.
+
+The variance is the average of the squared deviations from the mean, i.e., var = mean(abs(x - x.mean())**2).
+##############################################################################################################################################################################
+numpy.percentile
+
+numpy.percentile(a, q, axis=None, out=None, overwrite_input=False, interpolation='linear', keepdims=False)[source]
+Compute the q-th percentile of the data along the specified axis.
+
+Returns the q-th percentile(s) of the array elements.
+
+Given a vector V of length N, the q-th percentile of V is the value q/100 of the way from the minimum to the maximum in a sorted copy of V. The values and distances of the two nearest neighbors as well as the interpolation parameter will determine the percentile if the normalized ranking does not match the location of q exactly. This function is the same as the median if q=50, the same as the minimum if q=0 and the same as the maximum if q=100.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
